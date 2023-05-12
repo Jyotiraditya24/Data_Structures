@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b394679-3a41-488e-b2af-5d55c0b8dff6" name="Changes" comment="">
+    <list default="true" id="2b394679-3a41-488e-b2af-5d55c0b8dff6" name="Changes" comment="solved basic subset questions using recursion next commit will be using iterative method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/src/Recursion/Video3Arrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSA/src/Recursion/Video3Arrays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/Recursion/SubsetQuestion/SubsetQ1.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSA/src/Recursion/SubsetQuestion/SubsetQ1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,13 +41,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Video3Arrays">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Recursion.Main" />
+  <component name="RunManager" selected="Application.SubsetQ1">
+    <configuration name="BasicStringQ1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Recursion.SubsetQuestion.BasicStringQ1" />
       <module name="DSA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Recursion.*" />
+          <option name="PATTERN" value="Recursion.SubsetQuestion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SubsetQ1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Recursion.SubsetQuestion.SubsetQ1" />
+      <module name="DSA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Recursion.SubsetQuestion.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,11 +94,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Video4Patterns" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Recursion.Video4Patterns" />
+      <module name="DSA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Recursion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SubsetQ1" />
+        <item itemvalue="Application.BasicStringQ1" />
+        <item itemvalue="Application.Video4Patterns" />
         <item itemvalue="Application.Video3Arrays" />
         <item itemvalue="Application.Video2" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -98,7 +126,39 @@
       <option name="presentableId" value="Default" />
       <updated>1683690030147</updated>
     </task>
+    <task id="LOCAL-00001" summary="Video 3 done important concept learned herre">
+      <created>1683829774233</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683829774233</updated>
+    </task>
+    <task id="LOCAL-00002" summary="solved basic subset questions using recursion next commit will be using iterative method">
+      <created>1683870236474</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683870236474</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Video 3 done important concept learned herre" />
+    <MESSAGE value="solved basic subset questions using recursion next commit will be using iterative method" />
+    <option name="LAST_COMMIT_MESSAGE" value="solved basic subset questions using recursion next commit will be using iterative method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -110,6 +170,11 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DSA/src/Recursion/SubsetQuestion/BasicStringQ1.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

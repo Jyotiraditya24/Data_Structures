@@ -6,13 +6,16 @@ package Recursion.SubsetQuestion;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class SubsetQ1 {
     public static void main(String[] args) {
         String str = "abc";
+        int[]arr = {1,2,3};
         printSubset("", str);
         System.out.println(printSubset2("", str));
         System.out.println(printSubset3("", str));
+        System.out.println(IterativeSubset(arr));
     }
 //    Find the subset of the string
 //    very important in every ans we a3re either taking or removing an element
@@ -54,5 +57,18 @@ public class SubsetQ1 {
         leftList.addAll(rightList);
         leftList.addAll(middleList);
         return leftList;
+    }
+    public static List<List<Integer>> IterativeSubset(int[]arr){
+         List<List<Integer>> outer = new ArrayList<>();
+         outer.add(new ArrayList<>());
+        for(int num: arr){
+            int size = outer.size();
+            for (int i=0;i<size;i++){
+                List<Integer> internal = new ArrayList<>(outer.get(i));
+                internal.add(num);
+                outer.add(internal);
+            }
+        }
+        return  outer;
     }
 }
