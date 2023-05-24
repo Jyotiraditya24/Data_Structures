@@ -1,6 +1,7 @@
 package backtracking;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,8 +14,10 @@ public class Main {
                 {true,true,true},
                 {true,true,true},
         };
+        int[][]answer = new int[3][3];
 //        pathWithObstacles2("",board,0,0);
-        backTrack("",board,0,0);
+//        backTrack("",board,0,0);
+        backTrackMatrixAdvance("",board,0,0,answer,1);
     }
 
     static int count (int row , int col){
@@ -173,5 +176,40 @@ public class Main {
             backTrackMatrix(p+"L",maze,row,col-1);
         }
         maze[row][col] = true;
+    }
+
+    static void backTrackMatrixAdvance(String p, boolean[][]maze,int row,int col,int[][]answer,int count){
+        if(row == maze.length-1 && col== maze[0].length-1){
+            answer[row][col] = count;
+            System.out.println(p);
+            for (int[] ints : answer) {
+                System.out.println(Arrays.toString(ints));
+            }
+            return;
+        }
+        if(!maze[row][col]){
+            return;
+        }
+        maze[row][col] = false;
+
+
+        if(row< maze.length-1){
+            answer[row][col] = count;
+            backTrackMatrixAdvance(p+"D",maze,row+1,col,answer,count+1);
+        }
+        if(col< maze[0].length-1){
+            answer[row][col] = count;
+            backTrackMatrixAdvance(p+"R",maze,row,col+1,answer,count+1);
+        }
+        if(row>0){
+            answer[row][col] = count;
+            backTrackMatrixAdvance(p+"U",maze,row-1,col,answer,count+1);
+        }
+        if(col>0){
+            answer[row][col] = count;
+            backTrackMatrixAdvance(p+"L",maze,row,col-1,answer,count+1);
+        }
+        maze[row][col] = true;
+        answer[row][col] = 0;
     }
 }
