@@ -7,7 +7,6 @@
     <list default="true" id="2b394679-3a41-488e-b2af-5d55c0b8dff6" name="Changes" comment="using iterative method IMPORTANT">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSA/src/backtracking/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSA/src/backtracking/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DSA/backtracking/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSA/backtracking/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,12 +196,12 @@
           <line>16</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/DSA/src/backtracking/Main.java</url>
-          <line>135</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Data_Structures$Main.ic" NAME="Main Coverage Results" MODIFIED="1684916176666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>backtracking.*</FILTER>
+    </SUITE>
   </component>
 </project>
