@@ -10,10 +10,11 @@ public class Main {
 //        pathWithObstacles("",0,0);
         boolean [][]board = {
                 {true, true, true,},
-                {true,false,true},
+                {true,true,true},
                 {true,true,true},
         };
-        pathWithObstacles2("",board,0,0);
+//        pathWithObstacles2("",board,0,0);
+        backTrack("",board,0,0);
     }
 
     static int count (int row , int col){
@@ -125,5 +126,29 @@ public class Main {
         if(col<maze[0].length -1 ){
             pathWithObstacles(p+"R",row,col+1);
         }
+    }
+
+    static void backTrack(String p,boolean[][]maze,int row,int col){
+        if(row == maze.length-1 && col == maze[0].length-1){
+            System.out.println(p);
+            return;
+        }
+        if(!maze[row][col]){
+            return;
+        }
+        maze[row][col] = false;
+        if(row<maze.length-1 ){
+            backTrack(p+"D",maze,row+1,col);
+        }
+        if(col< maze[0].length -1 ){
+            backTrack(p+"R",maze,row,col+1);
+        }
+        if(row>0){
+            backTrack(p+"U",maze,row-1,col);
+        }
+        if(col>0){
+            backTrack(p+"L",maze,row,col-1);
+        }
+        maze[row][col] = true;
     }
 }
