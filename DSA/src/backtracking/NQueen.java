@@ -2,13 +2,9 @@ package backtracking;
 
 public class NQueen {
     public static void main(String[] args) {
-        boolean[][] maze = {
-                {false, false, false, false},
-                {false, false, false, false},
-                {false, false, false, false},
-                {false, false, false, false},
-        };
-        NQueen(0,maze);
+        boolean[][] maze = new boolean[8][8];
+//        NQueen(0,maze);
+        System.out.println( NQueenCount(0,maze));
     }
 
     public static void printBoard(boolean[][] maze) {
@@ -41,6 +37,29 @@ public class NQueen {
             }
         }
     }
+
+
+    public static int NQueenCount(int row, boolean[][] maze) {
+        if (row == maze.length) {
+            printBoard(maze);
+            return 1;
+        }
+        int count  = 0;
+        for (int col = 0; col < maze.length; col++) {
+            if (isSafe(row, col, maze)) {
+                // Place the queen at (row, col)
+                maze[row][col] = true;
+
+                // Recurse for the next row
+                count += NQueenCount(row + 1, maze);
+
+                // Restore the board to its original state
+                maze[row][col] = false;
+            }
+        }
+        return count;
+    }
+
 
     public static boolean isSafe(int row, int col, boolean[][] maze) {
         // Check if there is a queen in the same row
