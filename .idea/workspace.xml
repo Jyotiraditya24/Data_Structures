@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2b394679-3a41-488e-b2af-5d55c0b8dff6" name="Changes" comment="using iterative method IMPORTANT">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/src/BinaryTrees/Intro.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/src/backtracking/NQueen.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSA/src/backtracking/NQueen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DSA/backtracking/NQueen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSA/backtracking/NQueen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/BinaryTrees/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSA/src/BinaryTrees/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/Stack/CustomDynamicStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSA/src/Stack/CustomDynamicStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/Stack/CustomStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSA/src/Stack/CustomStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DSA/Stack/CustomStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DSA/Stack/Main.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +47,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main (2)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Stack.Main" />
       <module name="DSA" />
@@ -60,12 +63,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="backtracking.Main" />
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BinaryTrees.Main" />
       <module name="DSA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="backtracking.*" />
+          <option name="PATTERN" value="BinaryTrees.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,12 +102,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubsetQ1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Recursion.SubsetQuestion.SubsetQ1" />
+    <configuration name="QueueMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Queue.QueueMain" />
       <module name="DSA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Recursion.SubsetQuestion.*" />
+          <option name="PATTERN" value="Queue.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,11 +117,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.QueueMain" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.NKnights" />
         <item itemvalue="Application.NQueen" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.SubsetQ1" />
       </list>
     </recent_temporary>
   </component>

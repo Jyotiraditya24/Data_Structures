@@ -43,10 +43,10 @@ public class CustomStack {
         return data[pointer];
     }
 
-    private boolean isFull() {
+    public boolean isFull() {
         return data.length -1 == pointer;
     }
-    private boolean isEmpty(){
+    public boolean isEmpty(){
         return pointer == -1;
     }
 }
