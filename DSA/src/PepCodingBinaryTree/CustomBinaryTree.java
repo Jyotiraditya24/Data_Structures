@@ -15,6 +15,7 @@ public class CustomBinaryTree {
             Node node = new Node(arr[0]);
             Pair rp = new Pair(node,1);
             stack.push(rp);
+            root = node;
         }
         int index = 0;
         while (stack.size()>0){
@@ -46,6 +47,20 @@ public class CustomBinaryTree {
             }
         }
     }
+
+    public void PreDisplay() {
+        PreDisplay(this.root);
+    }
+
+    public void PreDisplay(Node root) {
+        if (root == null) {
+            return;
+        }
+        System.out.println((root.left != null ? root.left.data : "null") + "<-" + root.data + "->" + (root.right != null ? root.right.data : "null"));
+        PreDisplay(root.left);
+        PreDisplay(root.right);
+    }
+
 
 
 
