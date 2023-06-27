@@ -52,7 +52,7 @@ public class CustomBinaryTree {
         PreDisplay(this.root);
     }
 
-    public void PreDisplay(Node root) {
+    private void PreDisplay(Node root) {
         if (root == null) {
             return;
         }
@@ -62,8 +62,46 @@ public class CustomBinaryTree {
     }
 
 
+    public int size(){
+      return  size(this.root);
+    }
+    private int size(Node root){
+        if(root == null){
+            return 0;
+        }
+        int heightLeft = size(root.left);
+        int heightRight = size(root.right);
 
+        return  heightRight+heightLeft + 1;
+    }
 
+    public int height(){
+       return height(this.root) -1;
+    }
+
+    private int height(Node root){
+        if(root==null){
+            return 0;
+        }
+        int heightLeft = height(root.left);
+        int heightRight = height(root.right);
+
+        return (Math.max(heightLeft,heightRight) +1);
+    }
+
+    public int sum(){
+        return sum(this.root);
+    }
+
+    private int sum(Node root){
+        if(root == null){
+            return  0;
+        }
+        int leftSum = sum(root.left);
+        int rightSum = sum(root.right);
+
+        return leftSum+ rightSum + root.data;
+    }
 
 
 

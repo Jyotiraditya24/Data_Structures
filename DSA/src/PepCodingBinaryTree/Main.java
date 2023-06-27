@@ -6,5 +6,8 @@ public class Main {
         CustomBinaryTree tree = new CustomBinaryTree();
         tree.createBinaryTree(arr);
         tree.PreDisplay();
+        System.out.println(tree.size());
+        System.out.println(tree.height());
+        System.out.println(tree.sum());
     }
 }
