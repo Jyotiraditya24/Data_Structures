@@ -81,7 +81,7 @@ public class CustomBinaryTree {
 
     private int height(Node root){
         if(root==null){
-            return 0;
+            return 0; // return -1 for edges, 0 for nodes
         }
         int heightLeft = height(root.left);
         int heightRight = height(root.right);
