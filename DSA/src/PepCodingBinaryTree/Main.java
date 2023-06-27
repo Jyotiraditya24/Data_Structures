@@ -9,5 +9,6 @@ public class Main {
         System.out.println(tree.size());
         System.out.println(tree.height());
         System.out.println(tree.sum());
+        System.out.println(tree.max());
     }
 }

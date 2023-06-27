@@ -103,6 +103,19 @@ public class CustomBinaryTree {
         return leftSum+ rightSum + root.data;
     }
 
+    public int max(){
+        return max(this.root);
+    }
+
+    private int max(Node root){
+        if(root==null){
+            return 0;
+        }
+        int leftData = max(root.left);
+        int rightData = max(root.right);
+        return Math.max(root.data,Math.max(leftData,rightData));
+    }
+
 
 
     private static class Node{
