@@ -10,5 +10,10 @@ public class Main {
         System.out.println(tree.height());
         System.out.println(tree.sum());
         System.out.println(tree.max());
+        tree.preOrderTraversal();
+        System.out.println();
+        tree.inOrderTraversal();
+        System.out.println();
+        tree.postOrderTraversal();
     }
 }

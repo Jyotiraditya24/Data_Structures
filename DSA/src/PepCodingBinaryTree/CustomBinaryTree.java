@@ -117,6 +117,47 @@ public class CustomBinaryTree {
     }
 
 
+    public void preOrderTraversal(){
+        preOrderTraversal(this.root);
+    }
+
+    public void postOrderTraversal(){
+        postOrderTraversal(this.root);
+    }
+    public void inOrderTraversal(){
+        inOrderTraversal(this.root);
+    }
+
+
+    private void preOrderTraversal(Node root){
+        if(root == null){
+            return;
+        }
+        System.out.print(root.data+", ");
+        preOrderTraversal(root.left);
+        preOrderTraversal(root.right);
+    }
+
+    private void postOrderTraversal(Node root){
+        if(root == null){
+            return;
+        }
+        postOrderTraversal(root.left);
+        postOrderTraversal(root.right);
+        System.out.print(root.data+", ");
+    }
+    private void inOrderTraversal(Node root){
+        if(root == null){
+            return;
+        }
+        inOrderTraversal(root.left);
+        System.out.print(root.data+", ");
+        inOrderTraversal(root.right);
+    }
+
+
+
+
 
     private static class Node{
         Node left;
