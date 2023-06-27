@@ -15,5 +15,7 @@ public class Main {
         tree.inOrderTraversal();
         System.out.println();
         tree.postOrderTraversal();
+        System.out.println();
+        tree.levelOrderTraversal();
     }
 }

@@ -1,5 +1,7 @@
 package PepCodingBinaryTree;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
 import java.util.Stack;
 
 public class CustomBinaryTree {
@@ -153,6 +155,33 @@ public class CustomBinaryTree {
         inOrderTraversal(root.left);
         System.out.print(root.data+", ");
         inOrderTraversal(root.right);
+    }
+
+    public void levelOrderTraversal(){
+        levelOrderTraversal(this.root);
+    }
+
+    private void levelOrderTraversal(Node root){
+        System.out.println("LEVEL ORDER TRAVERSAL STARTED");
+// used concept of remove print add 
+        Queue<Node> queue = new ArrayDeque<>();
+        queue.add(root);
+        while (queue.size()>0){
+            int size = queue.size();
+            for (int i=0;i<size;i++){
+                Node node = queue.peek();
+                System.out.print(node.data+ " ");
+                queue.remove();
+                if(node.left!=null){
+                queue.add(node.left);
+                }
+                if(node.right!=null){
+                queue.add(node.right);
+                }
+            }
+            System.out.println();
+        }
+        System.out.println("LEVEL ORDER TRAVERSAL ENDED");
     }
 
 
