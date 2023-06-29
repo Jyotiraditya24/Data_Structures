@@ -252,10 +252,7 @@ public class CustomBinaryTree {
 
     public ArrayList<Integer> nodeToRootPath(int target){
         boolean ans =  nodeToRootPath(this.root,target);
-        if(ans){
-            return list;
-        }
-            return new ArrayList<>();
+        return list;
 
     }
 
@@ -298,6 +295,32 @@ public class CustomBinaryTree {
         }
      return false;
 
+    }
+
+    public void printKLevel(int level){
+        printKLevel(this.root,level);
+    }
+
+    private void printKLevel(Node root, int level) {
+        Queue<Node> queue = new ArrayDeque<>();
+        queue.add(root);
+        int heroNumber = 0;
+        while (heroNumber!=level+1){
+            int size = queue.size();
+            for (int i =0;i<size;i++){
+                Node top = queue.remove();
+                if(heroNumber==level){
+                    System.out.print(top.data+" ");
+                }
+                if(top.left!=null){
+                    queue.add(top.left);
+                }
+                if(top.right!=null){
+                    queue.add(top.right);
+                }
+            }
+            heroNumber+=1;
+        }
     }
 
 

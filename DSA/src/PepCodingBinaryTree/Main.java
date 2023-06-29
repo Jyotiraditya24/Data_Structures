@@ -19,6 +19,7 @@ public class Main {
         tree.levelOrderTraversal();
         tree.iterativePreOrder();
         tree.iterativeAll();
-        System.out.println(tree.nodeToRootPath(30));
+        System.out.println(tree.nodeToRootPath(300));
+        tree.printKLevel(3);
     }
 }
