@@ -163,7 +163,7 @@ public class CustomBinaryTree {
 
     private void levelOrderTraversal(Node root){
         System.out.println("LEVEL ORDER TRAVERSAL STARTED");
-// used concept of remove print add 
+// used concept of remove print add
         Queue<Node> queue = new ArrayDeque<>();
         queue.add(root);
         while (queue.size()>0){
@@ -184,8 +184,68 @@ public class CustomBinaryTree {
         System.out.println("LEVEL ORDER TRAVERSAL ENDED");
     }
 
+    public void iterativePreOrder(){
+        iterativePreOrder(this.root);
+    }
 
+    private void iterativePreOrder(Node root){
+        Stack<Node> stack = new Stack<>();
+        stack.push(root);
+        System.out.print("START ->");
+        while (stack.size()>0){
+            Node node = stack.pop();
+            System.out.print(node.data+"->");
+            if(node.right!=null){
+                stack.push(node.right);
+            }
+            if(node.left!=null){
+                stack.push(node.left);
+            }
+        }
+        System.out.println("END");
+    }
 
+    public void iterativeAll(){
+        iterativeAll(this.root);
+    }
+    private void iterativeAll(Node root){
+        Stack<Pair> stack = new Stack<>();
+        Pair pair = new Pair(root,1);
+        stack.push(pair);
+        String pre = "PREORDER ->";
+        String in =  "INORDER ->";
+        String post =  "POSTORDER ->";
+        while (stack.size()>0){
+            Pair top = stack.peek();
+            int val = top.value;
+            if(val==1){
+//                System.out.print("PRE ->"+top.node.data+"->");
+               pre+=top.node.data+"->";
+                Node left = top.node.left;
+                if(left!=null){
+                    Pair topush = new Pair(top.node.left,1);
+                    stack.push(topush);
+                }
+                top.value+=1;
+            }
+           else if(val == 2){
+                in+=top.node.data+"->";
+                Node right = top.node.right;
+                if(right!=null){
+                    Pair topush = new Pair(right,1);
+                    stack.push(topush);
+                }
+                top.value+=1;
+            }
+            else {
+                post+=top.node.data+"->";
+                stack.pop();
+            }
+        }
+        System.out.println(pre+"END");
+        System.out.println(in+"END") ;
+        System.out.println(post+"END");
+    }
 
 
     private static class Node{
