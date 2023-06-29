@@ -1,6 +1,7 @@
 package PepCodingBinaryTree;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Queue;
 import java.util.Stack;
 
@@ -245,6 +246,58 @@ public class CustomBinaryTree {
         System.out.println(pre+"END");
         System.out.println(in+"END") ;
         System.out.println(post+"END");
+    }
+
+    private static ArrayList<Integer> list = new ArrayList<>();
+
+    public ArrayList<Integer> nodeToRootPath(int target){
+        boolean ans =  nodeToRootPath(this.root,target);
+        if(ans){
+            return list;
+        }
+            return new ArrayList<>();
+
+    }
+
+    private boolean nodeToRootPath(Node root, int target ) {
+        if(root==null){
+            return false;
+        }
+        list.add(root.data);
+
+        if (root.data == target) {
+            return true;
+        }
+        boolean leftChild = nodeToRootPath(root.left,target);
+        boolean rightChild = nodeToRootPath(root.right,target);
+        if(leftChild || rightChild){
+            return true;
+        }
+        list.remove(list.size()-1);
+        return false;
+    }
+
+    public boolean find(int target){
+        return find(this.root, target);
+    }
+    private boolean find(Node node,int target){
+        if(node == null){
+            return false;
+        }
+        if(node.data == target){
+            return true;
+        }
+       boolean leftChild =  find(node.left , target);
+        if(leftChild){
+            return true;
+        }
+
+        boolean rightChild = find(node.right,target);
+        if(rightChild){
+            return true;
+        }
+     return false;
+
     }
 
 
