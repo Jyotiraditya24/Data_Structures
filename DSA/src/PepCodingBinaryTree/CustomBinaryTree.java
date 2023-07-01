@@ -323,6 +323,21 @@ public class CustomBinaryTree {
         }
     }
 
+    public void printKlevelRecursive(int level){
+        printKlevelRecursive(this.root,level);
+    }
+    private void printKlevelRecursive(Node root,int level){
+        if(root == null){
+            return;
+        }
+        if(level == 0){
+            System.out.print(root.left.data + " " );
+            System.out.print(root.right.data + " ");
+        }
+        printKLevel(root.left,level-1);
+        printKLevel(root.right,level-1);
+    }
+
 
     private static class Node{
         Node left;
