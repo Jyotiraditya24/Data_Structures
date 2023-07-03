@@ -1,5 +1,9 @@
 package PepCodingBinaryTree;
 
+
+
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Integer[]arr = {50,25,12,null,null,37,30,null,null,null,75,62,null,70,null,null,87,null,null};
@@ -27,5 +31,10 @@ public class Main {
         System.out.println(tree.whichLevel(87));
         System.out.println("**************************\n");
         tree.KLevelFar(37,2);
+        System.out.println("/n");
+        tree.printLeafToRoot();
+
     }
+
+
 }

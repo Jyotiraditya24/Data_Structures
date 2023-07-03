@@ -1,10 +1,7 @@
 package PepCodingBinaryTree;
 
 import java.lang.reflect.Array;
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class CustomBinaryTree {
     private Stack<Pair> stack = new Stack<>();
@@ -406,6 +403,57 @@ public class CustomBinaryTree {
             level-=1;
         }
     }
+
+    public ArrayList<ArrayList<Node>> leafToRoot(){
+       return leafToRoot(this.root);
+    }
+
+    private ArrayList<ArrayList<Node>> leafToRoot(Node root) {
+        if (root == null) {
+            return new ArrayList<>();
+        }
+
+        ArrayList<ArrayList<Node>> left = leafToRoot(root.left);
+        ArrayList<ArrayList<Node>> right = leafToRoot(root.right);
+
+        ArrayList<ArrayList<Node>> answerList = new ArrayList<>();
+
+        if (left.isEmpty() && right.isEmpty()) {
+            ArrayList<Node> list = new ArrayList<>();
+            list.add(root);
+            answerList.add(list);
+        } else {
+            for (ArrayList<Node> list : left) {
+                list.add(root);
+                answerList.add(list);
+            }
+            for (ArrayList<Node> list : right) {
+                list.add(root);
+                answerList.add(list);
+            }
+        }
+
+        return answerList;
+    }
+
+    public void printLeafToRoot(){
+        ArrayList<ArrayList<Node>> answer = leafToRoot();
+        printLeafToRoot(answer);
+    }
+
+    private void printLeafToRoot(ArrayList<ArrayList<Node>> leafToRootList) {
+        for (ArrayList<Node> list : leafToRootList) {
+            for (int i = list.size() - 1; i >= 0; i--) {
+                System.out.print(list.get(i).data);
+                if (i > 0) {
+                    System.out.print(" -> ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+
 
     public void KLevelFar(int target,int level) {
         KLevelFar(this.root, target, level);
