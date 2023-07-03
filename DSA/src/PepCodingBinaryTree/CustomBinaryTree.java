@@ -1,5 +1,6 @@
 package PepCodingBinaryTree;
 
+import java.lang.reflect.Array;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Queue;
@@ -253,7 +254,6 @@ public class CustomBinaryTree {
     public ArrayList<Integer> nodeToRootPath(int target){
         boolean ans =  nodeToRootPath(this.root,target);
         return list;
-
     }
 
     private boolean nodeToRootPath(Node root, int target ) {
@@ -323,20 +323,94 @@ public class CustomBinaryTree {
         }
     }
 
-    public void printKlevelRecursive(int level){
-        printKlevelRecursive(this.root,level);
+    public void printKLevelRecursive(int level) {
+        printKLevelRecursive(this.root, level);
     }
-    private void printKlevelRecursive(Node root,int level){
-        if(root == null){
+
+    private void printKLevelRecursive(Node root, int level) {
+        if (root == null) {
+            return;
+        }
+        if (level == 0) {
+            System.out.print(root.data + " ");
+        } else {
+            printKLevelRecursive(root.left, level - 1);
+            printKLevelRecursive(root.right, level - 1);
+        }
+    }
+
+
+    public int whichLevel(int data){
+        return whichLevel(data,this.root,0);
+    }
+
+    private int whichLevel (int data,Node node,int level){
+        if(node == null){
+            return -1;
+        }
+        if(node.data == data){
+            return level;
+        }
+       int left =  whichLevel(data,node.left,level+1);
+       if(left>0){
+           return left;
+       }
+        int right = whichLevel(data,node.right,level+1);
+      if(right>0){
+           return right;
+       }
+        return -1;
+    }
+
+
+    ArrayList<Node> nodeList = new ArrayList<>();
+
+    private boolean nodeRootToPathAlt(Node node,int target){
+        if(node == null){
+            return false;
+        }
+        if(node.data == target){
+            nodeList.add(node);
+            return true;
+        }
+
+        boolean left = nodeRootToPathAlt(node.left,target);
+        if(left){
+            nodeList.add(node);
+            return true;
+        }
+        boolean right = nodeRootToPathAlt(node.right,target);
+        if(right){
+            nodeList.add(node);
+            return true;
+        }
+        return false;
+    }
+
+    private void printKLevelBlocker(Node node,int level,Node blocker){
+        if(node == null || level < 0 ||  node == blocker){
             return;
         }
         if(level == 0){
-            System.out.print(root.left.data + " " );
-            System.out.print(root.right.data + " ");
+            System.out.print(node.data + " ");
         }
-        printKLevel(root.left,level-1);
-        printKLevel(root.right,level-1);
+        printKLevelBlocker(node.left,level-1,blocker);
+        printKLevelBlocker(node.right,level-1,blocker);
     }
+
+
+    private void KLevelFar(Node root,int target,int level){
+        nodeRootToPathAlt(root,target);
+        for (int i = 0; i <nodeList.size(); i++) {
+            printKLevelBlocker(nodeList.get(i),level,i==0?null:nodeList.get(i-1));
+            level-=1;
+        }
+    }
+
+    public void KLevelFar(int target,int level) {
+        KLevelFar(this.root, target, level);
+    }
+
 
 
     private static class Node{

@@ -22,6 +22,10 @@ public class Main {
         System.out.println(tree.nodeToRootPath(300));
         tree.printKLevel(3);
         System.out.println("HELLO");
-        tree.printKlevelRecursive(2);
+        tree.printKLevelRecursive(2);
+        System.out.println("\nTHE LEVEL IS");
+        System.out.println(tree.whichLevel(87));
+        System.out.println("**************************\n");
+        tree.KLevelFar(37,2);
     }
 }
