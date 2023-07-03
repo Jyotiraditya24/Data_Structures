@@ -452,6 +452,50 @@ public class CustomBinaryTree {
             System.out.println();
         }
     }
+    private ArrayList<ArrayList<Node>> lowAndHighLeafToRoot(ArrayList<ArrayList<Node>> leafToRootList, int low, int high) {
+        ArrayList<ArrayList<Node>> validPaths = new ArrayList<>();
+
+        for (ArrayList<Node> list : leafToRootList) {
+            int sum = 0;
+            for (int i = 0; i < list.size(); i++) {
+                sum += list.get(i).data;
+            }
+
+            if (sum >= low && sum <= high) {
+                validPaths.add(list);
+            }
+        }
+
+        return validPaths;
+    }
+
+
+    public void lowAndHighLeafToRoot(int low , int high){
+        ArrayList<ArrayList<Node>> answer = leafToRoot();
+        ArrayList<ArrayList<Node>> paths =  lowAndHighLeafToRoot(answer,low,high);
+        printLeafToRoot(paths);
+    }
+
+    public void lowAndHighAlternative(int low, int high) {
+        lowAndHighAlternative(low, high, this.root, "", 0);
+    }
+
+    private void lowAndHighAlternative(int low, int high, Node node, String ans, int sum) {
+        if (node == null) {
+            return;
+        }
+        if (node.left == null && node.right == null) {
+            sum += node.data;
+            if (sum >= low && sum <= high) {
+                System.out.println(ans + node.data);
+            }
+        }
+
+        lowAndHighAlternative(low, high, node.left, ans + node.data + "->", sum + node.data);
+        lowAndHighAlternative(low, high, node.right, ans + node.data + "->", sum + node.data);
+    }
+
+
 
 
 

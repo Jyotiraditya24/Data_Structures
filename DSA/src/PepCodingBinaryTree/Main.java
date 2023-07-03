@@ -3,6 +3,7 @@ package PepCodingBinaryTree;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,8 +32,12 @@ public class Main {
         System.out.println(tree.whichLevel(87));
         System.out.println("**************************\n");
         tree.KLevelFar(37,2);
-        System.out.println("/n");
+        System.out.println("\n");
         tree.printLeafToRoot();
+        System.out.println("LOW TO HIGH PATHS");
+            tree.lowAndHighLeafToRoot(100,150);
+        System.out.println("ALTERNATIVE");
+            tree.lowAndHighAlternative(100,150);
 
     }
 
