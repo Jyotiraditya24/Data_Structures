@@ -1,10 +1,5 @@
 package PepCodingBinaryTree;
 
-
-
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
         Integer[]arr = {50,25,12,null,null,37,30,null,null,null,75,62,null,70,null,null,87,null,null};
@@ -35,11 +30,9 @@ public class Main {
         System.out.println("\n");
         tree.printLeafToRoot();
         System.out.println("LOW TO HIGH PATHS");
-            tree.lowAndHighLeafToRoot(100,150);
+        tree.lowAndHighLeafToRoot(100,150);
         System.out.println("ALTERNATIVE");
-            tree.lowAndHighAlternative(100,150);
-
+        tree.lowAndHighAlternative(100,150);
+        tree.leftClonedTree();
     }
-
-
 }

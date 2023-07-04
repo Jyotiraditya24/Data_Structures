@@ -496,12 +496,27 @@ public class CustomBinaryTree {
     }
 
 
-
-
-
     public void KLevelFar(int target,int level) {
         KLevelFar(this.root, target, level);
     }
+
+    private Node leftClonedTree(Node node){
+        if(node == null){
+            return null;
+        }
+        Node clonedNode = new Node(node.data);
+        Node leftCloned = leftClonedTree(node.left);
+        clonedNode.left = leftCloned;
+        node.left = clonedNode;
+        leftClonedTree(node.right);
+        return node;
+    }
+
+    public void leftClonedTree(){
+        Node root = leftClonedTree(this.root);
+        preOrderTraversal(root);
+    }
+
 
 
 
