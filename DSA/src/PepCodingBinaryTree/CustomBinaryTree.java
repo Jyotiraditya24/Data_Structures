@@ -518,6 +518,20 @@ public class CustomBinaryTree {
     }
 
 
+    private Node leftClonedToNormalTree(Node node){
+        if(node == null){
+            return null;
+        }
+
+        Node left =  leftClonedToNormalTree(node.left.left);
+        Node right = leftClonedToNormalTree(node.right);
+
+       node.left = left;
+       node.right = right;
+
+       return node;
+
+    }
 
 
     private static class Node{
