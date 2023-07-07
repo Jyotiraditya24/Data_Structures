@@ -530,9 +530,93 @@ public class CustomBinaryTree {
        node.right = right;
 
        return node;
-
     }
 
+    ArrayList<Node> oneChildList = new ArrayList<>();
+
+    private Node parentWithOneChild(Node node){
+        if(node == null){
+            return null;
+        }
+
+        Node left = parentWithOneChild(node.left);
+        Node right = parentWithOneChild(node.right);
+
+        if(left==null && right == null){
+            return node;
+        }
+       else if(left!=null && right !=null){
+            return node;
+        }
+        else {
+            oneChildList.add(node);
+            return node;
+        }
+    }
+
+    public void parentWithOneChild(){
+        parentWithOneChild(this.root);
+        for(Node node: oneChildList){
+            System.out.println(node.data);
+        }
+    }
+
+    private Node removeLeaf(Node node){
+        if (node == null){
+            return null;
+        }
+
+       Node left =  removeLeaf(node.left);
+       Node right = removeLeaf(node.right);
+
+        if(node.left == null && node.right == null){
+            return null;
+        }
+
+       node.left = left;
+       node.right = right;
+
+       return node;
+    }
+
+    public void removeLeaf(){
+        removeLeaf(this.root);
+        this.levelOrderTraversal();
+    }
+
+    private ArrayList<Integer> diameter(Node node){
+        if(node == null){
+            ArrayList<Integer>list = new ArrayList<>();
+           list.add(null);
+           return list;
+
+        }
+        ArrayList<Integer> ans = new ArrayList<>();
+        if(node.left == null && node.right==null){
+            ArrayList<Integer>list = new ArrayList<>();
+            list.add(0);
+            return list;
+        }
+        ArrayList<Integer> left = diameter(node.left);
+        ArrayList<Integer> right = diameter(node.right);
+
+        ans.addAll(left);
+        ans.addAll(right);
+
+        ArrayList<Integer> finalAnswer = new ArrayList<>();
+        for (int i =0 ; i<ans.size();i++){
+            if(ans.get(i)!=null){
+                finalAnswer.add(i, ans.get(i) + 1);
+            }
+        }
+        return finalAnswer;
+    }
+
+    public int diameter(){
+        ArrayList<Integer> answer = diameter(this.root);
+        Collections.sort(answer,Collections.reverseOrder());
+        return answer.get(0) + answer.get(1);
+    }
 
     private static class Node{
         Node left;

@@ -7,6 +7,11 @@
     <list default="true" id="2b394679-3a41-488e-b2af-5d55c0b8dff6" name="Changes" comment="using iterative method IMPORTANT">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSA/src/PepCodingBinaryTree/CustomBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSA/src/PepCodingBinaryTree/CustomBinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/PepCodingBinaryTree/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSA/src/PepCodingBinaryTree/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DSA/PepCodingBinaryTree/CustomBinaryTree$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSA/PepCodingBinaryTree/CustomBinaryTree$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DSA/PepCodingBinaryTree/CustomBinaryTree$Pair.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSA/PepCodingBinaryTree/CustomBinaryTree$Pair.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DSA/PepCodingBinaryTree/CustomBinaryTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSA/PepCodingBinaryTree/CustomBinaryTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DSA/PepCodingBinaryTree/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSA/PepCodingBinaryTree/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

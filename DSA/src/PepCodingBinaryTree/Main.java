@@ -33,6 +33,13 @@ public class Main {
         tree.lowAndHighLeafToRoot(100,150);
         System.out.println("ALTERNATIVE");
         tree.lowAndHighAlternative(100,150);
-        tree.leftClonedTree();
+//        tree.leftClonedTree();  // comment this when using other methods because it modifies the original tree
+        System.out.println("\n\n");
+        tree.parentWithOneChild();
+
+        System.out.println("After removal of leaf");
+        tree.removeLeaf();
+        System.out.println(tree.diameter());
+
     }
 }
