@@ -1,6 +1,5 @@
 package PepCodingBinaryTree;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class CustomBinaryTree {
@@ -24,7 +23,7 @@ public class CustomBinaryTree {
             if(top.value == 1){
                 index+=1;
                 if(arr[index]!=null){
-                    Node ln = new Node(arr[index]);
+                    Node ln = new Node(arr[index ]);
                     Pair lp = new Pair(ln,1);
                     stack.push(lp);
                     top.node.left = ln;
@@ -584,38 +583,23 @@ public class CustomBinaryTree {
         this.levelOrderTraversal();
     }
 
-    private ArrayList<Integer> diameter(Node node){
-        if(node == null){
-            ArrayList<Integer>list = new ArrayList<>();
-           list.add(null);
-           return list;
-
+    int tilt = 0;
+    private int tilt(Node node) {
+        if (node == null) {
+            return 0;
         }
-        ArrayList<Integer> ans = new ArrayList<>();
-        if(node.left == null && node.right==null){
-            ArrayList<Integer>list = new ArrayList<>();
-            list.add(0);
-            return list;
-        }
-        ArrayList<Integer> left = diameter(node.left);
-        ArrayList<Integer> right = diameter(node.right);
 
-        ans.addAll(left);
-        ans.addAll(right);
+        int leftTilt = tilt(node.left);
+        int rightTilt = tilt(node.right);
+        int localTilt =Math.abs( leftTilt-rightTilt);
 
-        ArrayList<Integer> finalAnswer = new ArrayList<>();
-        for (int i =0 ; i<ans.size();i++){
-            if(ans.get(i)!=null){
-                finalAnswer.add(i, ans.get(i) + 1);
-            }
-        }
-        return finalAnswer;
+        tilt+=localTilt;
+        return leftTilt + rightTilt + node.data;
     }
 
-    public int diameter(){
-        ArrayList<Integer> answer = diameter(this.root);
-        Collections.sort(answer,Collections.reverseOrder());
-        return answer.get(0) + answer.get(1);
+    public int tilt(){
+     tilt(this.root);
+     return tilt;
     }
 
     private static class Node{

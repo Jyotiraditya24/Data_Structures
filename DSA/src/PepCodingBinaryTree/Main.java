@@ -38,8 +38,9 @@ public class Main {
         tree.parentWithOneChild();
 
         System.out.println("After removal of leaf");
-        tree.removeLeaf();
-        System.out.println(tree.diameter());
-
+//        tree.removeLeaf();
+        System.out.println("HEELLOOO"
+        );
+//        tree.experiment();
     }
 }
