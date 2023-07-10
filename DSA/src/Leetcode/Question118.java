@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Question118 {
     public static void main(String[] args) {
-        List<List<Integer>> ans =   generate(4);
+        List<List<Integer>> ans =   generate(10);
         printTriangle(ans);
 
     }
