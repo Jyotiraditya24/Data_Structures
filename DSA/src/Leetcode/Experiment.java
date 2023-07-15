@@ -1,6 +1,9 @@
 package Leetcode;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Experiment {
     public static void main(String[] args) {
@@ -14,10 +17,11 @@ public class Experiment {
         for(int[]hero: ans){
             System.out.println(Arrays.toString(hero));
         }
-        int[]arr2 = new int[]{4,3,1,2,2};
+        int[]arr2 = new int[]{3,2,3};
         cyclicSort(arr2);
         System.out.println(Arrays.toString(arr2));
         System.out.println(majorityElement(new int[]{2,2,1,1,1,2,2}));
+        System.out.println(majorityElement2(new int[]{3,2,3}));
 
     }
 
@@ -75,6 +79,55 @@ public class Experiment {
         double answer = sum/nums.length;
         System.out.println(answer);
         return (int)Math.ceil(answer);
+    }
+
+    public static List<Integer> majorityElement2(int[] nums) {
+        // BEST APPROACH
+        int count1 = 0;
+        int maj1 = Integer.MIN_VALUE;
+        int count2 = 0;
+        int maj2=Integer.MIN_VALUE;
+        List<Integer> list = new ArrayList<>();
+
+        for(int i=0 ;i<nums.length;i++){
+            if(count1 == 0 && nums[i]!=maj2){
+                maj1 = nums[i];
+                count1 = 1;
+            }else if(count2 == 0 && nums[i]!=maj1){
+                maj2 = nums[i];
+                count2 = 1;
+            }
+            else if(nums[i] == maj1){
+                count1++;
+            }
+            else if(nums[i]==maj2){
+                count2++;
+            }
+            else {
+                count1--;
+                count2--;
+            }
+        }
+        count1 = 0;
+        count2 = 0;
+
+        for(int i: nums){
+            if(i==maj1){
+                count1++;
+            }
+            if(i==maj2){
+                count2++;
+            }
+        }
+
+        if(count1>nums.length/3){
+            list.add(maj1);
+        }
+        if(count2>nums.length/3){
+            list.add(maj2);
+        }
+
+        return list;
     }
 }
 
