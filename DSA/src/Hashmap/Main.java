@@ -5,6 +5,4 @@ public class Main {
    public static class HashMap<K,V>{
 
     }
-
-    public void put(K key, V value)
 }
