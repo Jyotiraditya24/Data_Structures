@@ -1,9 +1,7 @@
 package Leetcode;
 
-import java.time.temporal.JulianFields;
 
 public class Question21 {
-
     static class ListNode {
       int val;
       ListNode next;
@@ -41,7 +39,6 @@ public class Question21 {
             return first;
 
         while(first!=null && second!=null){
-
             if(first.val<second.val){
                 if(head==null){
                     ListNode node = new ListNode(first.val,null);

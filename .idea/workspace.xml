@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2b394679-3a41-488e-b2af-5d55c0b8dff6" name="Changes" comment="using iterative method IMPORTANT">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/src/Hashmap/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSA/src/Hashmap/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/Leetcode/Question21.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSA/src/Leetcode/Question21.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DSA/Leetcode/Question21$ListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSA/Leetcode/Question21$ListNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DSA/Leetcode/Question21.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSA/Leetcode/Question21.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,13 +48,13 @@
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.Question21">
-    <configuration name="Experiment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Leetcode.Experiment" />
+  <component name="RunManager" selected="Application.MaxHeap">
+    <configuration name="Hero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="backtracking.Hero" />
       <module name="DSA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Leetcode.*" />
+          <option name="PATTERN" value="backtracking.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -60,12 +62,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Question118" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Leetcode.Question118" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DAA.Main" />
       <module name="DSA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Leetcode.*" />
+          <option name="PATTERN" value="DAA.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -73,12 +75,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Question21" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Leetcode.Question21" />
+    <configuration name="MaxHeap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DAA.MaxHeap" />
       <module name="DSA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Leetcode.*" />
+          <option name="PATTERN" value="DAA.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -86,12 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Question53" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Leetcode.Question53" />
+    <configuration name="QuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DAA.QuickSort" />
       <module name="DSA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Leetcode.*" />
+          <option name="PATTERN" value="DAA.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,12 +101,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Question75" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Leetcode.Question75" />
+    <configuration name="SubSetSUm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StriverRecursionQuestion.SubSetSUm" />
       <module name="DSA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Leetcode.*" />
+          <option name="PATTERN" value="StriverRecursionQuestion.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Question21" />
-        <item itemvalue="Application.Experiment" />
-        <item itemvalue="Application.Question75" />
-        <item itemvalue="Application.Question53" />
-        <item itemvalue="Application.Question118" />
+        <item itemvalue="Application.MaxHeap" />
+        <item itemvalue="Application.SubSetSUm" />
+        <item itemvalue="Application.QuickSort" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Hero" />
       </list>
     </recent_temporary>
   </component>
@@ -206,6 +208,14 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/DSA/src/Leetcode/Question19.java</url>
+          <line>18</line>
+          <properties class="Leetcode.Question19" method="removeNthFromEnd">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/DSA/src/Recursion/SubsetQuestion/BasicStringQ1.java</url>
