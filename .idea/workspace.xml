@@ -6,9 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="2b394679-3a41-488e-b2af-5d55c0b8dff6" name="Changes" comment="using iterative method IMPORTANT">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/src/Leetcode/Question21.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSA/src/Leetcode/Question21.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DSA/Leetcode/Question21$ListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSA/Leetcode/Question21$ListNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DSA/Leetcode/Question21.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSA/Leetcode/Question21.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/BinaryTrees/BinaryTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/BinaryTrees/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/DAA/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/DAA/QuickSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/GenericTrees/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/Queue/CircularQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/Queue/CustomQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/Queue/QueueMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/Stack/BBSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/Stack/BinarySearch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/Stack/CustomDynamicStack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/Stack/CustomStack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/Stack/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,13 +58,13 @@
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.MaxHeap">
-    <configuration name="Hero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="backtracking.Hero" />
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StackPep.Main" />
       <module name="DSA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="backtracking.*" />
+          <option name="PATTERN" value="StackPep.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,11 +126,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.MaxHeap" />
         <item itemvalue="Application.SubSetSUm" />
         <item itemvalue="Application.QuickSort" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Hero" />
       </list>
     </recent_temporary>
   </component>
