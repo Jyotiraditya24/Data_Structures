@@ -4,10 +4,8 @@ import java.util.Stack;
 
 public class Main {
     public static void main(String[] args) {
-    String str = "(a+b)+((c+d))";
+    String str = "(a+b+c+d)";
         System.out.println(DuplicateBrackets(str));
-
-
 
     }
 

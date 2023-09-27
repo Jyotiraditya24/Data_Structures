@@ -6,19 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2b394679-3a41-488e-b2af-5d55c0b8dff6" name="Changes" comment="using iterative method IMPORTANT">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/src/BinaryTrees/BinaryTree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/src/BinaryTrees/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/src/DAA/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/src/DAA/QuickSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/src/GenericTrees/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/src/Queue/CircularQueue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/src/Queue/CustomQueue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/src/Queue/QueueMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/src/Stack/BBSort.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/src/Stack/BinarySearch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/src/Stack/CustomDynamicStack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/src/Stack/CustomStack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSA/src/Stack/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSA/src/StackPep/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/DSA/src/StackPep/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DSA/StackPep/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DSA/StackPep/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,9 +47,9 @@
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="StackPep.Main" />
+  <component name="RunManager" selected="Application.NextGreaterElementSOL1">
+    <configuration name="BalancedBrackets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StackPep.BalancedBrackets" />
       <module name="DSA" />
       <extension name="coverage">
         <pattern>
@@ -72,12 +61,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DAA.Main" />
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StackPep.Main" />
       <module name="DSA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DAA.*" />
+          <option name="PATTERN" value="StackPep.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -98,12 +87,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DAA.QuickSort" />
+    <configuration name="NextGreaterElementSOL1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StackPep.NextGreaterElementSOL1" />
       <module name="DSA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DAA.*" />
+          <option name="PATTERN" value="StackPep.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,12 +100,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SubSetSUm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="StriverRecursionQuestion.SubSetSUm" />
+    <configuration name="Question1859" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Leetcode.Question1859" />
       <module name="DSA" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="StriverRecursionQuestion.*" />
+          <option name="PATTERN" value="Leetcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -126,11 +115,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.NextGreaterElementSOL1" />
+        <item itemvalue="Application.BalancedBrackets" />
+        <item itemvalue="Application.Question1859" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.MaxHeap" />
-        <item itemvalue="Application.SubSetSUm" />
-        <item itemvalue="Application.QuickSort" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +195,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/DSA/src/BinaryTrees/Main.java</url>
           <line>6</line>
-          <properties class="BinaryTrees.Main" method="main">
+          <properties class="BinaryTrees.Main">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="16" />
