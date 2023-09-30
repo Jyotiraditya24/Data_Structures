@@ -6,7 +6,7 @@ import java.util.Stack;
 public class NextGreaterElementSOL1 {
     public static void main(String[] args) {
     int[]arr= {2,5,9,3,1,12,6,8,7};
-   int[]ans =  nextGreater(arr);
+    int[]ans =  nextGreater(arr);
         System.out.println(Arrays.toString(ans));
     }
     public static int[] nextGreater(int[]arr){
@@ -20,12 +20,19 @@ public class NextGreaterElementSOL1 {
                 while(st.peek().data<arrData){
                     ans[st.peek().index]= arrData;
                     st.pop();
-                    st.push(new Pair(arr[i],i));
+                    if (st.isEmpty()) {
+                        break; // Check if the stack is empty before peeking again
+                    }
+                    topVal = st.peek().data;
                 }
-            }else {
-                st.push(new Pair(arr[i],i));
             }
+                st.push(new Pair(arrData,i));
+        }
 
+        for(int j = 0;j<ans.length;j++){
+            if(ans[j]==0){
+                ans[j]=-1;
+            }
         }
         return ans;
     }
